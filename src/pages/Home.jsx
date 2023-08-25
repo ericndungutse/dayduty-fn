@@ -8,9 +8,9 @@ function Home() {
         <div className="flex flex-col-reverse h-screen lg:flex-row xl:flex-rowauth">
             <div className="basis-3/5 bg-blue-600">Showcase</div>
             <div className="basis-2/5 flex flex-col p-7 justify-center items-center">
-                <div className="form-container  flex flex-col items-center w-full md:w-3/4 gap-4">
-                    <h2 className="text-center text-4xl mb-4">Sign up</h2>
-                    <hr className="w-56 h-0.5 bg-gradient max-auto my-0.5 border-0 rounded " />
+                <div className="form-container flex flex-col -mt-3 items-center w-full md:w-3/4 gap-6">
+                    <h2 className="text-center text-4xl">Sign up</h2>
+                    <hr className="w-56 h-0.5 bg-gradient max-auto my-0.5 border-0 rounded" />
                     <form className="w-full flex flex-col gap-3">
                         <div className="flex flex-col">
                             <InputLabel htmlFor="name">Name</InputLabel>

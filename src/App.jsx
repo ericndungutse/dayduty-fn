@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import Button from './components/Button'
 import Home from './pages/Home'
+import Signin from './pages/auth/Signin'
 
 function App() {
-
-  return <Home />
+  return <Signin />
 }
 
 export default App
