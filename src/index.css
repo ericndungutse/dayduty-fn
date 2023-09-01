@@ -19,3 +19,10 @@ button{
 .bg-gradient{
     background-image: var(--gradient-color);
 }
+
+.text-gradient{
+  background: linear-gradient(rgba(237,3,32,0.87), rgba(242,121,1,0.84) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
