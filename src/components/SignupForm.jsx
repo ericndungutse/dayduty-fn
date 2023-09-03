@@ -15,10 +15,10 @@ function SignupForm() {
                 required={true}
             />
             <InputGroup
-                 htmlFor="confirmPassword"
-                 type="password" id="confirmPassword" placeholder="Confirm Password..." required={true}
+                htmlFor="confirmPassword"
+                type="password" id="confirmPassword" placeholder="Confirm Password..." required={true}
             />
-            <Button customClasses="mt-4" disabled={false}>Sign Up</Button>
+            <Button customClasses="mt-4 btn-primary" disabled={false}>Sign Up</Button>
         </form>
     )
 

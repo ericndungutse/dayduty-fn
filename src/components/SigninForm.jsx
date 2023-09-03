@@ -12,7 +12,7 @@ function SigninForm() {
             labelText="Password"
             required={true}
         />
-        <Button customClasses="mt-4" disabled={false}>Sign Up</Button>
+        <Button customClasses="mt-4 btn-primary" disabled={false}>Sign Up</Button>
     </form>)
 }
 

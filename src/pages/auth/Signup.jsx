@@ -25,7 +25,7 @@ function Signup() {
                     <InputLabel htmlFor="confirmPassword">Confirm Password</InputLabel>
                     <Input type="password" id="confirmPassword" placeholder="Confirm Password..." required={true} />
                 </div>
-                <Button customClasses="mt-4" disabled={false}>Sign Up</Button>
+                <Button customClasses="mt-4 btn-primary" disabled={false}>Sign Up</Button>
             </form>
             <div className="w-full gap-2 flex -mt-5 items-center">
                 <p className="text-xs">Already registered ?</p>
