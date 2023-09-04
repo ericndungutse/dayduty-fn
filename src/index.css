@@ -27,6 +27,15 @@
 }
 
 .active{
-    background-image: var(--gradient-color);
+    background-color: rgb(156, 163, 175);
     color: #fff;
+}
+
+.v-icon{
+  display: block;
+  height: 15px;
+  width: 40px;
+  border-left: 5px solid green;
+  border-bottom: 5px solid green;
+  transform: rotate(-45deg);
 }

@@ -4,7 +4,7 @@ import SigninForm from "../../components/SigninForm"
 
 function Signin() {
     return <>
-        <div className="flex flex-col items-center border py-12 bg-white shadow-md px-6 rounded -mt-3 w-full md:w-3/4 gap-6">
+        <div className="flex flex-col items-center py-12 -mt-3 w-full md:w-3/4 gap-6">
             <h2 className="text-center text-4xl">Sign in</h2>
             <hr className="w-56 h-0.5 bg-gradient max-auto my-0.5 border-0 rounded" />
             <SigninForm />
