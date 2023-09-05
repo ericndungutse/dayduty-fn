@@ -7,9 +7,9 @@ export default function Table({ columns, data }) {
             <div className="overflow-x-auto">
                 <div className="w-full px-12 inline-block align-middle">
 
-                    <h1 class="text-3xl leading-none text-center tracking-tight text-gray-900 mt-2"><mark class="px-1 py-0.5 items-center text-white inline-block bg-gradient rounded  ">Your</mark> today's <mark class="px-1 py-0.5 items-center inline-block  text-white bg-gradient rounded">Dunties</mark></h1>
+                    <h1 className="text-3xl leading-none text-center tracking-tight text-gray-900 mt-2"><mark className="px-1 py-0.5 items-center text-white inline-block bg-gradient rounded  ">Your</mark> today's <mark className="px-1 py-0.5 items-center inline-block  text-white bg-gradient rounded">Dunties</mark></h1>
 
-                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+                    <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
                     <div className="overflow-hidden border rounded-lg">
                         <table className="min-w-full divide-y divide-gray-200">

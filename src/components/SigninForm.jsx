@@ -1,27 +1,32 @@
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
 import axios from "axios"
+import { useNavigate } from 'react-router-dom'
 
 import { loginUser } from '../redux/features/auth/auth.slice'
 import InputGroup from "./InputGroup"
 import Button from "./Button"
-import LoadingSpinner from "./LoadingSpinner"
+import LoadingSpinner from "./LoadingSpinner";
+import InComponentError from './InComponentError'
 
 function SigninForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMsg, SetErrorMsg] = useState('')
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    console.log(loginUser)
 
     async function handleSubmit(e) {
         try {
             setIsLoading(true)
+            SetErrorMsg("")
             e.preventDefault()
+
             const credentials = { email, password }
-            const res = await axios.post('https://dayduty.onrender.com/api/v1/auth/sign-in', {
+            const res = await axios.post('http://localhost:3000/api/v1/auth/sign-in', {
                 ...credentials
             })
 
@@ -32,10 +37,10 @@ function SigninForm() {
                     token: data.token,
                     user: data.data.user
                 }))
+                navigate('/user/todos')
             }
         } catch (error) {
-
-            alert(error.message)
+            SetErrorMsg(error?.response?.data?.message)
         } finally {
             setIsLoading(false)
         }
@@ -52,6 +57,10 @@ function SigninForm() {
 
     return (
         <form className="w-full flex flex-col gap-3" onSubmit={handleSubmit}>
+            {
+                errorMsg && <InComponentError>{errorMsg}</InComponentError>
+            }
+
             <InputGroup htmlFor="email"
                 type="email" id="email"
                 placeholder="Email..." labelText="Email"

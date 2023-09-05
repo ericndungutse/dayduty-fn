@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import SigninForm from "../../components/SigninForm"
 
-
 function Signin() {
     return <>
         <div className="flex flex-col items-center py-12 -mt-3 w-full md:w-3/4 gap-6">
