@@ -25,7 +25,7 @@ function SignupForm() {
             e.preventDefault()
 
             const userData = { name, email, password, passwordConfirm }
-            const res = await axios.post('https://dayduty.onrender.com/api/v1/auth/sign-up', {
+            const res = await axios.post(`${'https://dayduty.onrender.com' || import.meta.env.VITE_BACKEND_URL}/api/v1/auth/sign-up`, {
                 ...userData
             })
 

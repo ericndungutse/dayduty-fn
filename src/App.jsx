@@ -1,3 +1,4 @@
+import { React } from 'react';
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom';
 import AuthRoot from './pages/auth/AuthRoot';
 import Signin from './pages/auth/Signin';
@@ -8,6 +9,7 @@ import Dashboard from './pages/user-page/Dashboard';
 import Settings from './pages/user-page/Settings';
 import Todos from './pages/user-page/Todos';
 import Backlog from './pages/user-page/Backlog';
+import ActivationPage from './pages/auth/ActivationPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +19,7 @@ const router = createBrowserRouter(
         <Route path='signin' element={<Signin />} />
         <Route path='signup' element={<Signup />} />
       </Route>
+      <Route path='/activate-account/:token' element={<ActivationPage />} />
       <Route path='/user' element={<UserRoot />} >
         <Route index element={<Dashboard />} />
         <Route index path='dashboard' element={<Dashboard />} />
