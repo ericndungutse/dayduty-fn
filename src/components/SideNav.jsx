@@ -1,7 +1,6 @@
 import React from 'react'
 import { FiLogOut } from "react-icons/fi";
 import { NavLink } from 'react-router-dom'
-import Button from './Button'
 
 export default function SideNav() {
     return (
