@@ -26,7 +26,7 @@ function SigninForm() {
             e.preventDefault()
 
             const credentials = { email, password }
-            const res = await axios.post('http://localhost:3000/api/v1/auth/sign-in', {
+            const res = await axios.post('https://dayduty.onrender.com/api/v1/auth/sign-in', {
                 ...credentials
             })
 
